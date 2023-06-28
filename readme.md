@@ -15,7 +15,6 @@ pip install -r requirements.txt
 # Instalation of the repositories for detecting people
 pip3 install openmim
 
-mim install mmengine
 
 mim install mmcv-full
 
@@ -26,9 +25,6 @@ pip3 install -e .
 
 cd ..
 
-
-
-git clone https://github.com/open-mmlab/mmdetection.git
 
 cd mmdetection
 
@@ -41,5 +37,5 @@ cd ..
 
 
 # OPENCV
-1. pip install opencv-contrib-python==4.6.0.66
+pip install opencv-contrib-python==4.6.0.66
 
