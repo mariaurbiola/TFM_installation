@@ -1,4 +1,4 @@
-#SETTING UP THE ENVIRONMENT
+# SETTING UP THE ENVIRONMENT
 #enter the folder where you want your work to be, in my case TFM_MariaUrbiola
 
 conda create -n TFM_env python=3.8 pytorch=1.10 cudatoolkit=11.3 torchvision -c pytorch -y
@@ -38,6 +38,6 @@ cd ..
 
 
 
-#OPENCV
+# OPENCV
 1. pip install opencv-contrib-python==4.6.0.66
 
