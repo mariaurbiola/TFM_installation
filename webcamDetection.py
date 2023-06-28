@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from mmcv import Config, DictAction
 
 from mmpose.apis.webcam import WebcamExecutor
+#from webcam_executor import WebcamExecutor
 from mmpose.apis.webcam.nodes import model_nodes
 
 

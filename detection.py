@@ -4,8 +4,6 @@ from videoFileDetection import runVideoFileDetection
 import os
 import cv2
 from argparse import ArgumentParser
-print(cv2.__version__)
-print(cv2.__path__)
 
 
 
@@ -46,21 +44,24 @@ def detection(detection_mode, media_file):
         runWebcamDetection()
     elif detection_mode == 'imageFile':
         print('imageFile')
-        path_to_media_folder = os.path.dirname(__file__) + '/mmpose_photos/'
-        media_name = path_to_media_folder + media_file #change this with the name of the file
+        #path_to_media_folder = os.path.dirname(__file__) #+ '/photos/'
+        #media_name = path_to_media_folder + media_file #change this with the name of the file
+        media_name = os.path.dirname(__file__)+ media_file
+        print(media_name)
         runImageFileDetection(media_name)
     elif detection_mode == 'videoFile':
         print('videoFile')
-        path_to_media_folder = os.path.dirname(__file__) + '/mmpose_videos/'
-        media_name = path_to_media_folder + media_file #change this with the name of the file
+        #path_to_media_folder = os.path.dirname(__file__) + '/videos/'
+        #media_name = path_to_media_folder + media_file #change this with the name of the file
+        media_name = os.path.dirname(__file__)+ media_file
         runVideoFileDetection(media_name)
     else:
         print('nada')
         
         
-detection_mode = 'imageFile'
-media_file = 'test1.jpg'
-#detection_mode = 'videoFile'
-#media_file = 'demo.mp4'
+#detection_mode = 'imageFile'
+#media_file = '/photos/persons1.jpg'
+detection_mode = 'videoFile'
+media_file = '/videos/video3.mp4'
 #detection_mode = 'webcam'
 detection(detection_mode, media_file)
