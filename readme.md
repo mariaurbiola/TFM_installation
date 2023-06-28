@@ -14,6 +14,7 @@ pip install -r requirements.txt
 
 # Instalation of the repositories for detecting people
 pip3 install openmim
+
 mim install mmengine
 
 mim install mmcv-full
