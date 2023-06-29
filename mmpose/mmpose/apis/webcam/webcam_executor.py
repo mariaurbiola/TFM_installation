@@ -288,7 +288,7 @@ class WebcamExecutor():
                 else:
                     
                     imgPoints = (np.array([corners[0][0][0],corners[0][0][1],corners[0][0][2],corners[0][0][3]], np.int32)).astype('float32')       
-                    with open('/home/maria/Escritorio/TFM/TFM_MariaUrbiola/calibrate camera/calibration.yaml',"r") as f:
+                    with open('/calibrate camera/calibration.yaml',"r") as f:
                         loadeddict = yaml.load(f, Loader=SafeLoader)
                         cameraMatrix = loadeddict.get('camera_matrix')
                         distCoefs = loadeddict.get('dist_coeff')
@@ -299,7 +299,7 @@ class WebcamExecutor():
                     #print("retval",retval)
                     distanceActualPoint = tvec[2][0]
                     distance = distanceActualPoint  #update the distance for next frame
-                with open('/home/maria/Escritorio/TFM/TFM_MariaUrbiola/webcam/pointsWebcamFrame'+str(iterationNumber), "w") as f:
+                with open('webcam/pointsWebcamFrame'+str(iterationNumber), "w") as f:
                     for i in range (len(np.array(keypoints[0]))): #esto esta chano
                         #convert pixel coord to world coord
                         #print("iteracion n",i+1)
